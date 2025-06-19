@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
 body {
-  background: radial-gradient(circle at center, #7b4a20 0%, #3b240b 60%, #1a1005 100%);
   font-family: 'MedievalSharp', cursive;
   margin: 0;
   padding: 0;
   color: #fcebb4;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+}
+
+.logo {
+  width: 250px;
+  margin-top: 2rem;
+  height: auto;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -28,12 +32,16 @@ h1 {
 .welcome-message {
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-  color: #d4a20b;
+  color: black;
+  font-weight: 600;
   padding: 1rem;
   text-align: center;
   font-size: 1.2rem;
   border: 2px solid #5e3310;
+  background: rgba(186, 169, 131, 0.8);
   margin-bottom: 2rem;
+  margin-top: 2rem;
+  max-width: 75%;
 }
 
 .tablero-container {
@@ -50,18 +58,27 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   color: #fff3b3;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
   width: fit-content;
 }
 
+.coordinates-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 96vw;
+}
+
 .icon {
-  font-size: 2.5rem;
+  width: 26px;
+  height: 26px;
 }
 
 .button {
@@ -87,9 +104,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
-  font-size: 6px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 
 .fila {
@@ -102,8 +119,8 @@ h1 {
   border: 1px solid #5e3310;
   border-radius: 3px;
   padding: 2px;
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,4 +136,40 @@ h1 {
 .celda.box {
   background-color: #5576ec;
   color: #ffffff;
+}
+
+.celda.deadbox {
+  background: linear-gradient(to right, #9e0707, #5576ec);
+  color: #ffffff;
+}
+
+.round {
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: bold;
+  background: rgba(149, 135, 106, 0.642);
+  border-radius: 6px;
+  padding: 5px;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  height: 23px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-round {
+  color: #ecd58f;
+  background: rgba(111, 74, 35, 0.642);
+}
+
+.msg-round {
+  font-size: 0.75rem;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  max-width: 90%;
+  background: rgba(186, 169, 131, 0.6);
+  padding: 5px
 }
