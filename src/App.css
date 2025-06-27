@@ -7,6 +7,8 @@ body {
   color: #fcebb4;
   width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
+  background-color: #cdc082;
 }
 
 .App {
@@ -134,12 +136,12 @@ h1 {
 }
 
 .celda.box {
-  background-color: #5576ec;
+  background-color: #0c7617;
   color: #ffffff;
 }
 
 .celda.deadbox {
-  background: linear-gradient(to right, #9e0707, #5576ec);
+  background: linear-gradient(to right, #9e0707, #0c7617);
   color: #ffffff;
 }
 
@@ -172,4 +174,103 @@ h1 {
   max-width: 90%;
   background: rgba(186, 169, 131, 0.6);
   padding: 5px
+}
+
+.footer-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 100vw;
+  background: rgb(88, 64, 12);
+  color: white;
+  padding: 6px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.rules {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(186, 169, 131, 0.8);
+  color: #000;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.rules:hover {
+  background: rgba(166, 151, 117, 0.8);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.modal-content {
+  background: rgba(186, 169, 131, 0.9);
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  max-width: 85vw;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  background: rgba(186, 169, 131, 0.8);
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  position: fixed;
+  top: calc(7.5vh - 40px + 26px);
+  z-index: 4;
+  right: calc(7.5vw - 12px);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(166, 151, 117, 0.8);
+}
+
+ul {
+  margin-block-start: 10px;
+  margin-block-end: 0;
+  padding-inline-start: 20px;
+}
+
+li {
+  text-align: left;
+}
+
+h4 {
+  text-decoration: underline;
 }
